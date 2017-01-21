@@ -13,7 +13,7 @@ describe('LinksController', function () {
     $httpBackend = $injector.get('$httpBackend');
     Links = $injector.get('Links');
     $scope = $rootScope.$new();
-
+    // console.log($injector.get('$controller'));
     var $controller = $injector.get('$controller');
 
     createController = function () {
@@ -47,7 +47,6 @@ describe('LinksController', function () {
 
     createController();
     $httpBackend.flush();
-
     expect($scope.data.links).to.deep.equal(mockLinks);
   });
 });

@@ -12,7 +12,6 @@ describe('Services', function () {
   describe('Links Factory', function () {
     var $httpBackend, Links;
 
-    console.log('here------------------------------------------');
     beforeEach(inject(function (_$httpBackend_, _Links_) {
       $httpBackend = _$httpBackend_;
       Links = _Links_;
@@ -60,11 +59,11 @@ describe('Services', function () {
           url: 'https://github.com/reactorcore',
           title: 'reactorcore'
         });
-      console.log('wating for something to be printed out ', Links.addOne(github));
+      // console.log('wating for something to be printed out ', Links.addOne);
       Links.addOne(github).then(function (resp) {
-        console.log('This is the resp------------------------', resp);
+        // console.log('This is the resp------------------------', resp);
         expect(resp.status).to.equal(201);
-        expect(resp.data.title).to.equal('Hack Reactor Labs');
+        expect(resp.data.title).to.equal('reactorcore');
       });
 
       $httpBackend.flush();

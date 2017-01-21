@@ -12,13 +12,12 @@ angular.module('shortly.services', [])
       });
     },
     addOne: function(obj) {
-      console.log('Here is my obj-------', obj);
       return $http ({
         method: 'POST',
         url: '/api/links',
         data: obj
       }).then(function(resp) {
-        console.log('--------------------------------------------', resp.status);
+        // console.log('--------------------------------------------', resp.status);
         return resp;
       });
     }
