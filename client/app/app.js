@@ -14,6 +14,14 @@ angular.module('shortly', [
     .when('/signup', {
       templateUrl: 'app/auth/signup.html',
       controller: 'AuthController'
+    })
+    .when('/', {
+      templateUrl: 'app/links/links.html',
+      controller: 'LinksController'
+    })
+    .when('/create', {
+      templateUrl: 'app/shorten/shorten.html',
+      controller: 'ShortenController'
     });
     // Your code here
 
