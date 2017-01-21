@@ -1,5 +1,16 @@
-angular.module('shortly.links', [])
+var links = angular.module('shortly.links', []);
 
-.controller('LinksController', function ($scope, Links) {
+links.controller('LinksController', function ($scope, Links) {
   // Your code here
 });
+
+// links.factory('Links', function($http) {
+//   return {
+//     getZen: function() {
+//       return $http ({
+//         method: 'GET',
+//         url: 'https://'
+//       });
+//     }
+//   };
+// });
